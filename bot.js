@@ -19,6 +19,7 @@ client.on('message', msg => {
 });
 client.on('message', message => {
 if (message.content.split(' ')[0] == '$bc')
+if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('للادمن فقط اعتذر').then(msg => msg.delete(6000))
  message.guild.members.forEach( member => {
          if (!message.member.hasPermission("CONNECT"))  return;
 member.send( `${member} ! ` + "**" + " : ** " + message.content.substr(3));
@@ -27,7 +28,7 @@ member.send( `${member} ! ` + "**" + " : ** " + message.content.substr(3));
 });
 client.on("message", message => {
     var prefix = "$";
- 
+            if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('للادمن فقط اعتذر').then(msg => msg.delete(6000))
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "bc")) {
                          if (!message.member.hasPermission("CONNECT"))  return;
