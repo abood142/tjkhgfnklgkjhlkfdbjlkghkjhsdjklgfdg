@@ -5,7 +5,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 client.on('ready', () => {
-    client.user.setActivity("$bc",{type: 'Type'});
+    client.user.setActivity("$bc",{type: 'LISTENING'});
 });
 client.on('ready', () => {
     client.user.setStatus(" online");
