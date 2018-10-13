@@ -39,4 +39,19 @@ client.on("message", message => {
                             
                           }
 });
+   client.on("message", message => {
+    if (message.content === "$help") {
+     const embed = new Discord.RichEmbed() 
+         .setColor("#00FF00")
+         .setDescription(`:boom: :fire: **اوامر البوت** :fire::boom: 
+        **1-$bc**
+		_________________
+		**2-:gear: صيانه كل شوي :gear: **
+		_________________
+		**البوت من صنع ! Evil !ٌُ Aboood#7163**
+		_________________`)
+   message.author.sendEmbed(embed)
+   
+   }
+   });
 client.login(process.env.BOT_TOKEN);
