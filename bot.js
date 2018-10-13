@@ -6,8 +6,11 @@ client.on('ready', () => {
 });
 client.on('ready', () => {
     client.user.setActivity("$bc",{type: 'Type'});
-
 });
+client.on('ready', () => {
+    client.user.setStatus(" online");
+ 
+ });
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
