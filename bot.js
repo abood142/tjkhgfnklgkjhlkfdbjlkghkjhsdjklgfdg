@@ -4,6 +4,10 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
+client.on('ready', () => {
+    client.user.setActivity("$bc",{type: 'Type'});
+
+});
 
 client.on('message', msg => {
   if (msg.content === 'ping') {
