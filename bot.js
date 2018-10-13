@@ -28,7 +28,7 @@ member.send( `${member} ! ` + "**" + " : ** " + message.content.substr(3));
 });
 client.on("message", message => {
     var prefix = "$";
-            if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('للادمن فقط اعتذر').then(msg => msg.delete(6000))
+            if (!message.member.hasPermission("ADMINISTRATOR"))  return;
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "bc")) {
                          if (!message.member.hasPermission("CONNECT"))  return;
