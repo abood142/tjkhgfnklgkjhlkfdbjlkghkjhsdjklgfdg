@@ -12,26 +12,22 @@ client.on('ready', () => {
  
  });
 
-client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
-});
 client.on('message', message => {
 if (message.content.split(' ')[0] == '$bc')
-if (!message.member.hasPermission("ADMINISTRATOR"))  return;
  message.guild.members.forEach( member => {
-         if (!message.member.hasPermission("CONNECT"))  return;
+         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 member.send( `${member} ! ` + "**" + " : ** " + message.content.substr(3));
                                                             message.delete();
 });
 });
+
+
 client.on("message", message => {
     var prefix = "$";
-            if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+ 
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "bc")) {
-                         if (!message.member.hasPermission("CONNECT"))  return;
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
                             let embed4 = new Discord.RichEmbed()
              .setDescription("**:white_check_mark: | جاري ارسال البرودكاست**")
            .addField("مرسل البرودكاست" , message.author)
@@ -43,5 +39,4 @@ client.on("message", message => {
                             
                           }
 });
-
 client.login(process.env.BOT_TOKEN);
