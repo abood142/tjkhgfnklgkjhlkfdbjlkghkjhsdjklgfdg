@@ -19,7 +19,7 @@ client.on('message', msg => {
 });
 client.on('message', message => {
 if (message.content.split(' ')[0] == '$bc')
-if(!message.member.hasPermission('MANAGE_MESSAGE')) return message.channel.send('للادمن فقط اعتذر').then(msg => msg.delete(6000))
+if(!message.member.hasPermission('MANAGE MESSAGE')) return message.channel.send('يجب ان يمتلك البوت رتبة ').then(msg => msg.delete(6000))
  message.guild.members.forEach( member => {
          if (!message.member.hasPermission("CONNECT"))  return;
 member.send( `${member} ! ` + "**" + " : ** " + message.content.substr(3));
