@@ -11,7 +11,7 @@ client.on('ready', () => {
     client.user.setStatus(" online");
  
  });
-```js
+
 client.on('message', message => {
               if(!message.channel.guild) return;
     if(message.content.startsWith('$bc')) {
@@ -51,7 +51,7 @@ client.on('message', message => {
     })
     })
     }
-    });```
+    });
 
    client.on("message", message => {
     if (message.content === "$help") {
