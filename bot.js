@@ -79,7 +79,6 @@ message.author.send(`**مدة الرابط : يـوم
     footer: {
     
     }
-    }}).then(msg => {msg.delete(3000)});
   };
   
   });
