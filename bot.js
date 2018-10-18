@@ -107,7 +107,7 @@ message.author.send(`**مدة الرابط : يـوم
         .setColor('RANDOM')
         .setThumbnail(memberavatar)
         .addField(':running_shirt_with_sash: | name :  ',`${member}`)
-        .addField(':loudspeaker: | نورت السيرفر ي قلبي' , `Welcome to four brothers, ${member}`)
+        .addField(':loudspeaker: | نورت السيرفر ي قلبي' , `Welcome to Best | Shop, ${member}`)
         .addField(':id: | user :', "**[" + `${member.id}` + "]**" )
                 .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
                
