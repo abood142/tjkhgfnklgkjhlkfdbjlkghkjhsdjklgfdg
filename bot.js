@@ -8,7 +8,7 @@ client.on('ready', () => {
     client.user.setActivity("$bc",{type: 'PLAYING'});
 });
 client.on('ready', () => {
-    client.user.setStatus(" online");
+    client.user.setStatus(" dnd");
  
  });
 
