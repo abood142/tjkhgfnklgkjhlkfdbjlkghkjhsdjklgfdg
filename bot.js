@@ -5,7 +5,8 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 client.on('ready', () => {
-    client.user.setActivity("$bc",{type: 'PLAYING'});
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`| Best|Shop |`,"https://www.twitch.tv/NICKMERCS")
 });
 client.on('ready', () => {
     client.user.setStatus(" dnd");
